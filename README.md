@@ -8,8 +8,8 @@
 | email              | string | null: false               |
 | encrypted_password | string | null: false               |
 | profile            | text   | null: false               |
-| affiliation        | text   | null: false               |
-| director           | text   | null: false               |
+| occupation         | text   | null: false               |
+| position           | text   | null: false               |
 
 ### Association
 
