@@ -22,6 +22,18 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.find(params[:id])
   end
 
+  def edit
+  end
+
+  def update
+    if @prototype.update(prototype_params)
+      redirect_to prototype_path(@prototype)
+    else
+      render :edit
+    end
+  end
+
+
   private
   
   def prototype_params
@@ -30,8 +42,7 @@ class PrototypesController < ApplicationController
   end
 
   def set_prototype
-    
-    
+    @prototype = Prototype.find(params[:id])
   end
 
 end
