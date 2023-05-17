@@ -18,6 +18,10 @@ class PrototypesController < ApplicationController
     end  
   end
 
+  def show
+    @prototype = Prototype.find(params[:id])
+  end
+
   private
   
   def prototype_params
@@ -27,7 +31,7 @@ class PrototypesController < ApplicationController
 
   def set_prototype
     
-    @prototype = Prototype.find(params[:id])
+    
   end
 
 end
