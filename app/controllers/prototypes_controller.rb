@@ -2,7 +2,7 @@ class PrototypesController < ApplicationController
   before_action :set_prototype, except: [:index, :new, :create]
 
   def index
-    @prototypes = Prototype.all
+    @prototypes = Prototype.includes(:user)
   end
 
   def new
@@ -24,6 +24,9 @@ class PrototypesController < ApplicationController
   end
 
   def edit
+    unless user_signed_in? && current_user.id == @prototype.user_id
+      redirect_to root_path
+    end
   end
 
   def update
@@ -54,3 +57,4 @@ class PrototypesController < ApplicationController
   end
 
 end
+
