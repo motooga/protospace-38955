@@ -60,4 +60,6 @@ gem 'net-http'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'pry-byebug', group: :development
+gem 'pry-rails'
+
 
